@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Buy
+{% endblock %}
+
+{% block main %}
+<style>
+    .buy-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .buy-form input {
+        width: 300px;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+    }
+
+    .buy-form input:focus {
+        border-color: #007bff;
+        box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3);
+    }
+
+    .buy-form button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: #007bff;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .buy-form button:hover {
+        background-color: #0056b3;
+        box-shadow: 0 2px 8px rgba(0, 123, 255, 0.5);
+    }
+</style>
+
+<div class="mb-3">
+    <form class="buy-form" method="post">
+        <input autocomplete="off" autofocus class="form-control" name="symbol" placeholder="Symbol" type="text">
+        <input autocomplete="off" class="form-control" name="shares" placeholder="Number" type="text">
+        <button class="btn">BUY</button>
+    </form>
+</div>
+{% endblock %}

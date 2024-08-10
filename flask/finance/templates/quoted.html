@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+<style>
+    .price-info {
+        font-size: 1.5em; /* Increase the font size */
+        color: #333; /* Dark gray text color */
+        background-color: #f8f9fa; /* Light gray background */
+        padding: 15px; /* Add padding around the text */
+        border: 1px solid #ddd; /* Light gray border */
+        border-radius: 8px; /* Rounded corners */
+        text-align: center; /* Center the text */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+        max-width: 400px; /* Limit the maximum width */
+        margin: 20px auto; /* Center the element and add top/bottom margin */
+    }
+</style>
+
+<div class="mb-3 price-info">
+    price of {{ stocks["symbol"] }} = {{ stocks["price"] }}$
+</div>
+{% endblock %}
